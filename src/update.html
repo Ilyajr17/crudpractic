@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<h1> Update User </h1>
+
+<body>
+
+  <form method="get">
+
+
+
+    <p><b>Login</b><br>
+      <input type="text" size="40" name="login" value="<?php echo $array['login']; ?>" >
+    </p>
+
+    <p><b>First name</b><br>
+      <input type="text" size="40" name="firstname" value="<?php echo $array['firstname']; ?>">
+    </p>
+
+    <p><b>Last name</b><br>
+      <input type="text" size="40" name="lastname" value="<?php echo $array['lastname']; ?>">
+    </p>
+
+    <p><b>Birthday </b><br>
+      <input type="date" size="40" name="birthday" value="<?php echo $array['birthday']; ?>">
+    </p>
+
+
+
+    <label for="checkbox">Activ</label>
+    <input id="checkbox" type="checkbox" name="is_active" value= "<?php echo $array['is_active']; ?>" checked>
+
+    <p><b>id </b><br>
+      <input type="text" size="40" name="id" value="<?php echo $array['id']; ?>">
+    </p>
+
+
+
+    <button class="button" type="submit" name = "update">Update</button>
+    
+    <a href="index.php" class="button">Main</a>
+  </form>
+
+</body>
+
+</html>

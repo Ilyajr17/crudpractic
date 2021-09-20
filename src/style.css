@@ -1,0 +1,40 @@
+table {
+	border-collapse: collapse;
+	/*убираем пустые промежутки между ячейками*/
+	border: 1px solid grey;
+    /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+    background: maroon; /* Цвет фона таблицы */
+    color: white; /* Цвет текста */
+ }
+
+
+ 
+.button {
+    background-color: #4CAF50;
+	border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    align-content: center;
+   
+    
+}
+
+h1 {
+    text-align: center;
+    color:#4CAF50;
+}
+
+.modal {
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  .createDoc {
+align-content: center;
+text-align: center;
+  }
+

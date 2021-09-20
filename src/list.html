@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+    <form method="get">
+
+        <a href="engine.php?/user/create" class="button">Create new user</a>
+        <a href="index.php" class="button">В главное меню</a>
+
+        <h1> Table User </h1>
+
+        <table align="center" width="100%" border="1">
+            <thead>
+                <tr>
+                    <!-- Строка -->
+                    <th>Login</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Birhday</th>
+                    <th>Activ</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- Тело таблицы -->
+                <tr>
+                    <?php foreach($arrayJson as $name) :?>
+                    <td>
+                        <?php echo $name['login'];?>
+                    </td>
+                    <td>
+                        <?php echo $name['firstname'];?>
+                    </td>
+                    <td>
+                        <?php echo $name['lastname'];?>
+                    </td>
+                    <td>
+                        <?php echo $name['birthday'];?>
+                    </td>
+                    <td>
+                        <?php echo $name['is_active'];?>
+                    </td>
+                    <td><a href="update.php?id=<?php echo $name['id']; ?>" class="button">Update user</a></td>
+                    <td><a href="delete.php?id=<?php echo $name['id']; ?>" class="button">Delete user</a></td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+2021/09/15 14:00:19 [notice] 1#1: using the "epoll" event method
+2021/09/15 14:00:19 [notice] 1#1: nginx/1.21.3
+2021/09/15 14:00:19 [notice] 1#1: built by gcc 10.3.1 20210424 (Alpine 10.3.1_git20210424) 
+2021/09/15 14:00:19 [notice] 1#1: OS: Linux 5.4.0-84-generic
+2021/09/15 14:00:19 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/09/15 14:00:19 [notice] 1#1: start worker processes
+2021/09/15 14:00:19 [notice] 1#1: start worker process 22
+2021/09/15 14:00:19 [notice] 1#1: start worker process 23
+2021/09/15 14:00:19 [notice] 1#1: start worker process 24
+2021/09/15 14:00:19 [notice] 1#1: start worker process 25
+2021/09/15 14:03:35 [error] 24#24: *2 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "crud.local:8080", referrer: "http://crud.local:8080/"
+2021/09/16 05:39:42 [error] 22#22: *24 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:56:42 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:56:43 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:57:24 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:57:25 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:58:09 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:58:09 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:58:25 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:58:25 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:59:03 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:59:03 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:59:07 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:59:50 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 06:59:51 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:00:07 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:00:08 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:00:48 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:00:49 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:00:50 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:01:10 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:01:31 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:01:48 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:02:31 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:02:44 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:02:49 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:03:01 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:03:01 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:03:03 [error] 24#24: *168 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:04:23 [error] 22#22: *201 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:04:24 [error] 22#22: *201 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:08:27 [error] 24#24: *204 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:08:28 [error] 24#24: *204 open() "/var/www/style.css" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /style.css HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:30:52 [error] 24#24: *237 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 07:38:09 [error] 24#24: *260 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "crud.local:8080", referrer: "http://crud.local:8080/"
+2021/09/16 09:59:57 [error] 24#24: *478 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/16 12:13:41 [error] 22#22: *832 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/create.php"
+2021/09/16 12:43:00 [error] 22#22: *907 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/create.php"
+2021/09/16 12:45:44 [error] 24#24: *913 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/create.php"
+2021/09/17 05:43:22 [error] 22#22: *1241 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/17 09:40:04 [error] 22#22: *1601 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/17 09:46:10 [error] 22#22: *1605 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/17 11:01:01 [error] 22#22: *1755 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/17 12:22:30 [error] 24#24: *2148 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/17 13:06:56 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/09/17 13:06:56 [notice] 24#24: gracefully shutting down
+2021/09/17 13:06:56 [notice] 23#23: gracefully shutting down
+2021/09/17 13:06:56 [notice] 23#23: exiting
+2021/09/17 13:06:56 [notice] 24#24: exiting
+2021/09/17 13:06:56 [notice] 24#24: exit
+2021/09/17 13:06:56 [notice] 23#23: exit
+2021/09/17 13:06:56 [notice] 25#25: gracefully shutting down
+2021/09/17 13:06:56 [notice] 25#25: exiting
+2021/09/17 13:06:56 [notice] 25#25: exit
+2021/09/17 13:06:56 [notice] 22#22: gracefully shutting down
+2021/09/17 13:06:56 [notice] 22#22: exiting
+2021/09/17 13:06:56 [notice] 22#22: exit
+2021/09/17 13:06:56 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/09/17 13:06:56 [notice] 1#1: worker process 25 exited with code 0
+2021/09/17 13:06:56 [notice] 1#1: signal 29 (SIGIO) received
+2021/09/17 13:06:56 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2021/09/17 13:06:56 [notice] 1#1: worker process 23 exited with code 0
+2021/09/17 13:06:56 [notice] 1#1: signal 29 (SIGIO) received
+2021/09/17 13:06:56 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2021/09/17 13:06:56 [notice] 1#1: worker process 22 exited with code 0
+2021/09/17 13:06:56 [notice] 1#1: signal 29 (SIGIO) received
+2021/09/17 13:06:56 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/09/17 13:06:56 [notice] 1#1: worker process 24 exited with code 0
+2021/09/17 13:06:56 [notice] 1#1: exit
+2021/09/17 13:09:01 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:11
+2021/09/17 13:09:06 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:11
+2021/09/17 13:09:12 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:11
+2021/09/17 13:09:18 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:11
+2021/09/17 13:09:25 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:11
+2021/09/17 13:09:32 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:11
+2021/09/17 13:09:40 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:11
+2021/09/17 13:09:52 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/crud.conf:11
+2021/09/17 13:10:10 [notice] 1#1: using the "epoll" event method
+2021/09/17 13:10:10 [notice] 1#1: nginx/1.21.3
+2021/09/17 13:10:10 [notice] 1#1: built by gcc 10.3.1 20210424 (Alpine 10.3.1_git20210424) 
+2021/09/17 13:10:10 [notice] 1#1: OS: Linux 5.4.0-84-generic
+2021/09/17 13:10:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/09/17 13:10:10 [notice] 1#1: start worker processes
+2021/09/17 13:10:10 [notice] 1#1: start worker process 22
+2021/09/17 13:10:10 [notice] 1#1: start worker process 23
+2021/09/17 13:10:10 [notice] 1#1: start worker process 24
+2021/09/17 13:10:10 [notice] 1#1: start worker process 25
+2021/09/17 13:10:14 [error] 23#23: *2 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/17 13:55:53 [error] 22#22: *145 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/20 05:44:35 [error] 23#23: *235 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/index.php"
+2021/09/20 05:54:02 [error] 22#22: *247 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/update.php?id=2"
+2021/09/20 07:49:07 [error] 22#22: *540 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/20 08:35:53 [error] 22#22: *628 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/20 09:29:44 [error] 22#22: *658 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/20 09:42:28 [error] 22#22: *683 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/index.php"
+2021/09/20 11:02:04 [error] 23#23: *700 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2021/09/20 12:05:42 [error] 22#22: *826 open() "/var/www/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: crud.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
