@@ -9,8 +9,8 @@
 <body>
     <form method="get">
 
-        <a href="engine.php?/user/create" class="button">Create new user</a>
-        <a href="index.php" class="button">В главное меню</a>
+        <a href="/user/create" class="button">Create new user</a>
+        <a href="/main" class="button">В главное меню</a>
 
         <h1> Table User </h1>
 
@@ -47,8 +47,8 @@
                     <td>
                         <?php echo $name['is_active'];?>
                     </td>
-                    <td><a href="update.php?id=<?php echo $name['id']; ?>" class="button">Update user</a></td>
-                    <td><a href="delete.php?id=<?php echo $name['id']; ?>" class="button">Delete user</a></td>
+                    <td><a href="/user/update?id=<?php echo $name['id'];?>" class="button">Update user</a></td>
+                    <td><a href="/user/delete?id=<?php echo $name['id']; ?>" class="button">Delete user</a></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

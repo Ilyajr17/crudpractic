@@ -29,7 +29,7 @@ if ($arraycreate === true) {
 }
 
 if ($formaSave === true) {
-  header("Location:listDoc.php");
+  header("Location:/doc");
   exit;
 }
 

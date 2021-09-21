@@ -33,7 +33,7 @@ if ($arraycreate === true) {
 }
 
 if ($formaSave === true) {
-  header("Location:list.php");
+  header("Location:/user");
   exit;
 }
 

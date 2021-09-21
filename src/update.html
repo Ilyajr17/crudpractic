@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="/../../style.css" />
 </head>
 
 <h1> Update User </h1>
@@ -14,7 +14,7 @@
 
 
     <p><b>Login</b><br>
-      <input type="text" size="40" name="login" value="<?php echo $array['login']; ?>" >
+      <input type="text" size="40" name="login" value="<?php echo $array['login']; ?>">
     </p>
 
     <p><b>First name</b><br>
@@ -32,7 +32,7 @@
 
 
     <label for="checkbox">Activ</label>
-    <input id="checkbox" type="checkbox" name="is_active" value= "<?php echo $array['is_active']; ?>" checked>
+    <input id="checkbox" type="checkbox" name="is_active" value="<?php echo $array['is_active']; ?>" checked>
 
     <p><b>id </b><br>
       <input type="text" size="40" name="id" value="<?php echo $array['id']; ?>">
@@ -40,9 +40,9 @@
 
 
 
-    <button class="button" type="submit" name = "update">Update</button>
-    
-    <a href="index.php" class="button">Main</a>
+    <button class="button" type="submit" name="update">Update</button>
+
+    <a href="/user" class="button">Main</a>
   </form>
 
 </body>

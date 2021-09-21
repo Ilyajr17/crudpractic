@@ -1,6 +1,6 @@
 <?php
 $file = 'data/users/' . $_GET['id'] . '.json';
 unlink($file);
-header("Location:list.php");
+header("Location:/user");
 exit;
 require "delete.html";

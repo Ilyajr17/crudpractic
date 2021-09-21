@@ -8,8 +8,8 @@
 <body>
     <form method="get">
 
-        <a href="createDoc.php" class="button">Создать новый договор</a>
-        <a href="index.php" class="button">В главное меню</a>
+        <a href="/doc/create" class="button">Создать новый договор</a>
+        <a href="/main" class="button">В главное меню</a>
 
         <h1>Список Договоров</h1>
 
@@ -65,8 +65,8 @@
                     <td>
                         <?php echo $name['checkingAccount'];?>
                     </td>
-                    <td><a href="updateDoc.php?id=<?php echo $name['id']; ?>" class="button">Изменение</a></td>
-                    <td><a href="deleteDoc.php?id=<?php echo $name['id']; ?>" class="button">Удаление</a></td>
+                    <td><a href="/doc/update?id=<?php echo $name['id']; ?>" class="button">Изменение</a></td>
+                    <td><a href="/doc/delete?id=<?php echo $name['id']; ?>" class="button">Удаление</a></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

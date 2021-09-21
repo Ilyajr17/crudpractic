@@ -1,5 +1,7 @@
 <?php
 
+var_dump($_SERVER['QUERY_STRING']);
+
 function dd($var)
 {
    echo nl2br(str_replace(" ", "&nbsp;", print_r($var, true)));
@@ -22,6 +24,9 @@ foreach ($arrayFile as $filename) {
       $arrayJson[] = $array;
    }
 }
+
+
+
 
 
 require "list.html";

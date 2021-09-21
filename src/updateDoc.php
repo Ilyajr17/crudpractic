@@ -24,7 +24,7 @@ if (isset($_GET['update'])) {
 
 
     file_put_contents($file, $saveJson);
-    header("Location:listDoc.php");
+    header("Location: /doc");
     exit;
 }
 

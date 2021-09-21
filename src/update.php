@@ -1,7 +1,6 @@
 <?php
 
 
-
 $file = 'data/users/' . $_GET['id'] . '.json';
 
 $dir = 'data/users/';
@@ -18,13 +17,11 @@ if (isset($_GET['update'])) {
     $file = 'data/users/' . $_GET['id'] . '.json';
 
 
-
     $saveJson = json_encode($_GET);
-
-
+    
 
     file_put_contents($file, $saveJson);
-    header("Location:list.php");
+    header("Location: /user");
     exit;
 }
 
