@@ -1,9 +1,14 @@
-<?php 
+<?php
 
 
 class userModel
 {
 
-    function saveFile ()
+    function createUser()
+    {
+
+
+        
+    }
 
 }

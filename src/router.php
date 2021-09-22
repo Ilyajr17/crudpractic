@@ -20,30 +20,61 @@ class Router extends Singleton
 
 
 
-        $routes = array(
-            '/user' => 'list.php',
-            '/user/update' => 'update.php',
-            '/user/create' => 'create.php',
-            '/user/delete' => 'delete.php',
-            '/contract' => 'listDoc.php',
-            '/main' => 'swith.php',
-            '/doc' => 'listDoc.php',
-            '/doc/update' => 'updateDoc.php',
-            '/doc/delete' => 'deleteDoc.php',
-            '/doc/create' => 'createDoc.php'
-        );
+        $routes = [
+            '/user' => [
+                'class' => 'userController',
+                'method' => 'list'
+            ],
+            '/user/update' => [
+                'class' => 'userController',
+                'method' => 'update'
+            ],
+
+            '/user/create' => [
+                'class' => 'userController',
+                'method' => 'create',
+            ],
+
+            '/user/delete' => [
+                'class' => 'userController',
+                'method' => 'delete', 
+            ],
+          //  '/contract' => []
+                
+           // '/main' => 'swith.php',
+            '/doc' => [
+                'class' => 'docController',
+                'method' => 'listDoc'
+            ],
+
+            '/doc/update' => [
+                'class' => 'docController',
+                'method' => 'updateDoc'
+            ],
+               
+            '/doc/delete' => [
+                'class' => 'docController',
+              'method' => 'deleteDoc'
+            ],
+
+            '/doc/create' => [
+                'class' => 'docController',
+                'method' => 'createDoc'
+            ]
+            ];
+
+        
+
 
 
 
         foreach ($routes as $key => $val) {
-            if ($key == $correctPuth && substr($key, 0, 5) === '/user') {
-                $userController = new userController();
-                $userController->runUser();
-                require_once $val;
-            } elseif ($key == $correctPuth && substr($key, 0, 5) === '/doc') {
-                $docController = new docController();
-                $docController->runDoc();
-                require_once $val;
+           // print_r("{$key} and {$val['class']} and {$val['method']}()");
+            if ($key == $correctPuth) {
+                $controller = new $val['class']();
+                $method = (string)$val['method'];
+                $controller-> $method();
+                //require $val;
             }
         }
     }

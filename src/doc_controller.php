@@ -1,9 +1,30 @@
 <?php
+require 'docModel.php';
 
 class docController
 {
-    function runDoc()
+    function listDoc()
     {
-        echo 'абатаую с докми';
+        echo 'смотрю таблицу с доками';
     }
+
+    function createDoc() 
+    {
+        $createDoc = new docModel();
+        $createDoc->createDoc();
+        echo 'create doc';
+    }
+
+    function updateDoc()
+    {
+        echo 'редактриую документы';
+    }
+    function deleteDoc()
+    {
+        echo 'рекдактирую документ';
+    }
+
+  
+
 }
+
