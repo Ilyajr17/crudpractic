@@ -50,4 +50,4 @@ function chehkPath()
 }
 
 
-require "create.html";
+//require "create.html";

@@ -3,8 +3,14 @@
 
 class view
 {
-    function render()
+    function renderList($result)
     {
-        echo 'sd';
+        $arrayJson = $result;
+        require 'list.html';
+    }
+
+    function renderCreate() 
+    {
+        require 'create.html';   
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 require "singleton.php";
-require "controller.php";
+
 require "user_controller.php";
 require "doc_controller.php";
 
