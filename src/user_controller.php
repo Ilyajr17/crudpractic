@@ -6,44 +6,75 @@ require 'userModel.php';
 class userController
 {
 
-    function list()
-    {
+  function list()
+  {
 
-        $userTable = new userModel();
+    $userTable = new userModel();
 
-        $result = $userTable->createList();
+    $result = $userTable->createList();
 
-        View::render('list', ['arrayJson' => $result]);
+    View::render('list', ['arrayJson' => $result]);
+  }
+
+  function update()
+  {
+    $createUser = new userModel();
+
+    $resArray = $createUser->openUser($_GET['id']);
+   
+
+    View::render('update', ['array' => $resArray]);
+
+    if (isset($_GET)) {
+      echo 'я нажал на кнопку';
+      $result = $this->check();
+
     }
 
-    function update()
-    {
-        $createUser = new userModel();
-        
-        $resArray= $createUser->updateUser();
+   
 
-        View::render('update',['array' => $resArray]);
-        
-        echo 'редактирую юзеров ';
 
- 
+  }
+
+  function create()
+
+  {
+    $newUser = new userModel;
+
+
+    if (count($_GET) !== 0) {
+      $result = $this->check();
+      if ($result === 'Масив полный') {
+        $arraycreate = true;
+        $newUser->createUser($_GET);
+      }
     }
 
-    function create()
-    {
-        $createUser = new userModel();
 
 
-        View::render('create');
 
-        $newUserArray = $_GET;
+    View::render('create', ['result' => $result]);
+  }
 
 
-        $createUser->createUser($newUserArray);
+  function delete()
+  {
+    $deleteUSer = new userModel;
+  
+    $deleteUSer->deleteUser($_GET['id']);
+    
+  }
+
+
+
+
+  function check()
+  {
+    foreach ($_GET as $name) {
+      if ($name === "") {
+        return 'Ошибка есть пустые строки';
+      }
     }
-
-    function delete()
-    {
-        echo 'удаляю юзера';
-    }
+    return 'Масив полный';
+  }
 }

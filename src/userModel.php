@@ -38,7 +38,7 @@ class userModel
       }
     }
 
-    var_dump($arrayJson);
+   
     return $arrayJson;
   }
 
@@ -56,20 +56,39 @@ class userModel
 
     $corectPath = $path;
     $saveJson = json_encode($newUserArray);
-    var_dump($saveJson);
+   
     $file = file_put_contents($corectPath, $saveJson);
   }
 
-  function updateUser()
+  function openUser($id)
   {
 
-    $file = 'data/users/' . $_GET['id'] . '.json';
+    $file = 'data/users/' . $id . '.json';
 
-    $dir = 'data/users/';
+    
 
     $strJson = file_get_contents($file);
     $array = json_decode($strJson, true);
-return $array;
-    var_dump($array);
+
+    foreach ($array as $index => $name) {
+      $array['id'] = $id;
+      
+    }
+
+    return $array;
+ 
   }
+
+  function deleteUser($id)
+  {
+    $file = 'data/users/' . $id . '.json';
+unlink($file);
+header("Location:/user");
+exit;
+  }
+
+
+
+
+
 }

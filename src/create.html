@@ -13,46 +13,64 @@
 
 
 
-  <div class="success">
-    <h1>
-      <?php
-        if ($result === 'Ошибка есть пустые строки') {
-          echo "Не все поля заполнены!";
-        };
-        ?>
-    </h1>
-  </div>
+
 
   <form method="get">
 
     <p><b>Login</b><br>
 
-      <input type="text" size="40" name="login" value="<?php echo $_GET['login']; ?>" required>
+      <input type="text" size="40" name="login" value= "<?php echo $_GET['login']; ?>">
+     
+        <?php
+          if ($result === 'Ошибка есть пустые строки' && empty($_GET['login']) ) {
+            echo "Зполните поле";
+          };?>
+     
+
 
     </p>
 
     <p><b>First name</b><br>
-      <input type="text" size="40" name="firstname" value="<?php echo $_GET['firstname']; ?>" required>
+      <input type="text" size="40" name="firstname" value= "<?php echo $_GET['firstname']; ?>">
+      <?php
+      if ($result === 'Ошибка есть пустые строки' && empty($_GET['firstname']) ) {
+        echo "Зполните поле";
+      };?>
+ 
+
     </p>
 
     <p><b>Last name</b><br>
-      <input type="text" size="40" name="lastname" value="<?php echo $_GET['lastname']; ?>" >
+      <input type="text" size="40" name="lastname" value= "<?php echo $_GET['lastname']; ?>">
+      <?php
+      if ($result === 'Ошибка есть пустые строки' && empty($_GET['lastname']) ) {
+        echo "Зполните поле";
+      };?>
+ 
+
     </p>
 
     <p><b>Birthday </b><br>
-      <input type="date" size="40" name="birthday" value="<?php echo $_GET['birthday']; ?>" required>
+      <input type="date" size="40" name="birthday" value= "<?php echo $_GET['birthday']; ?>">
+      <?php
+      if ($result === 'Ошибка есть пустые строки' && empty($_GET['birthday']) ) {
+        echo "Зполните поле";
+      };?>
+ 
+
+
     </p>
 
 
 
 
     <label for="checkbox">Activ</label>
-    <input id="checkbox" type="checkbox" name="is_active" value="yes" checked>
+    <input id="checkbox" type="checkbox" name="is_active"  >
 
 
 
 
-    <button class="button" type="submit" name = 'create'>Create new user</button>
+    <button class="button" type="submit" >Create new user</button>
 
 
     <button type="reset" class="button">Очистить</button>

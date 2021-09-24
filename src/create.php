@@ -4,14 +4,14 @@
 
 
 
-function checkLines($_GET)
+function checkLines($array)
 {
-  foreach ($_GET as $name) {
-    if ($name === "") {
-      return false;
+  foreach ($array as $name) {
+    if (empty($name)) {
+      echo "Заполнить строку";
     }
   }
-  return true;
+  
 }
 
 $result = proverca();

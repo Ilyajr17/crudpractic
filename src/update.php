@@ -25,6 +25,6 @@ if (isset($_GET['update'])) {
     exit;
 }
 
-require "update.html";
+//require "update.html";
 
 exit;

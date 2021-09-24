@@ -69,7 +69,7 @@ class Router extends Singleton
 
 
         foreach ($routes as $key => $val) {
-           // print_r("{$key} and {$val['class']} and {$val['method']}()");
+           
             if ($key == $correctPuth) {
                 $controller = new $val['class']();
                 $method = (string)$val['method'];
@@ -86,15 +86,3 @@ class Router extends Singleton
     }
 }
 
-/*
-&& var_dump(substr($key,5)) == '/user'
-
-
-else { 
-                  $docController = new docController();
-                  $docController -> runDoc();
-                  require_once $val;
-
-              }
-
-*/

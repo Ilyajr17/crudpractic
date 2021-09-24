@@ -1,12 +1,13 @@
 <?php
 
-var_dump($_SERVER['QUERY_STRING']);
+
 
 function dd($var)
 {
    echo nl2br(str_replace(" ", "&nbsp;", print_r($var, true)));
    die();
 }
+
 
 $dir = 'data/users/';
 $arrayFile = scandir($dir);

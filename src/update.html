@@ -13,8 +13,13 @@
 
 
 
+
     <p><b>Login</b><br>
       <input type="text" size="40" name="login" value="<?php echo $array['login']; ?>">
+      <?php
+      if ($result === 'Ошибка есть пустые строки' && empty($array['firstname']) ) {
+        echo "Зполните поле";
+      };?>
     </p>
 
     <p><b>First name</b><br>
