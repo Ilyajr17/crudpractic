@@ -24,7 +24,7 @@ class userModel
     $arrayFile = scandir($dir);
 
     $array = [];
-    //die('!');
+
     foreach ($arrayFile as $filename) {
 
       $strJson = file_get_contents($dir . $filename);
@@ -37,45 +37,39 @@ class userModel
         $arrayJson[] = $array;
       }
     }
+
+    var_dump($arrayJson);
     return $arrayJson;
   }
+
+
 
   function createUser($newUserArray)
   {
 
 
-
-    var_dump($newUserArray);
-
-    function setData()
-    {
+    $i = 1;
+    $path = 'data/users/' . $i . '.json';
+    while (is_file($path)) {
+      $path = 'data/users/' . $i++ . '.json';
     }
-    // var_dump($_GET);
 
-
+    $corectPath = $path;
+    $saveJson = json_encode($newUserArray);
+    var_dump($saveJson);
+    $file = file_put_contents($corectPath, $saveJson);
   }
-  /*       
-function proverca()
-{
 
-    if (isset($_GET['create'])) {
-         echo 'baton push';
-      }
+  function updateUser()
+  {
 
+    $file = 'data/users/' . $_GET['id'] . '.json';
 
-  foreach ($_GET as $name) {
-    if ($name === "") {
-      return 'Ошибка есть пустые строки';
-    }
+    $dir = 'data/users/';
+
+    $strJson = file_get_contents($file);
+    $array = json_decode($strJson, true);
+return $array;
+    var_dump($array);
   }
-  return 'Масив полный';
-}
-
-$result = proverca();
-         //die('!');
-      } else {
-         echo 'baton ne push';
-         var_dump($get);
-      }
-  */
 }

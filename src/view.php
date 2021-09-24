@@ -1,16 +1,14 @@
 <?php
-//require "singleton.php";
+require_once "singleton.php";
 
-class view
+
+
+
+class View extends Singleton
 {
-    function renderList($result)
+    public static function render($template, $vars = [])
     {
-        $arrayJson = $result;
-        require 'list.html';
-    }
-
-    function renderCreate() 
-    {
-        require 'create.html';   
+        extract($vars);
+        require_once $template.'.html';
     }
 }

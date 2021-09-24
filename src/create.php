@@ -4,14 +4,14 @@
 
 
 
-function proverca()
+function checkLines($_GET)
 {
   foreach ($_GET as $name) {
     if ($name === "") {
-      return 'Ошибка есть пустые строки';
+      return false;
     }
   }
-  return 'Масив полный';
+  return true;
 }
 
 $result = proverca();
