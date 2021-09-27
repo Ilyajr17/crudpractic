@@ -1,7 +1,7 @@
 <?php
 
 require "singleton.php";
-
+require "swith_controller.php";
 require "user_controller.php";
 require "doc_controller.php";
 
@@ -39,9 +39,8 @@ class Router extends Singleton
                 'class' => 'userController',
                 'method' => 'delete', 
             ],
-          //  '/contract' => []
-                
-           // '/main' => 'swith.php',
+     
+            
             '/doc' => [
                 'class' => 'docController',
                 'method' => 'listDoc'
@@ -60,7 +59,13 @@ class Router extends Singleton
             '/doc/create' => [
                 'class' => 'docController',
                 'method' => 'createDoc'
+            ],
+
+            '/swith' => [
+                'class' => 'swithController',
+                'method' => 'swith'
             ]
+
             ];
 
         
@@ -83,6 +88,12 @@ class Router extends Singleton
 
     function getVar($name, $default = null)
     {
+        if (isset($_POST[$name])) {
+            return $_POST[$name];
+        } else if (isset($_GET[$name])) {
+            return $_GET[$name];
+        }
+        return $default;
     }
 }
 

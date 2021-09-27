@@ -12,17 +12,24 @@
   <h1> Create User </h1>
 
 
+<?php
+if (count($errors) > 0) {
+  foreach ($errors as $value) {
+    echo "<p>$value</p>";
+  }
+}
+
+?>
 
 
-
-  <form method="get">
+  <form method="post">
 
     <p><b>Login</b><br>
 
-      <input type="text" size="40" name="login" value= "<?php echo $_GET['login']; ?>">
+      <input type="text" size="40" name="login" value= "<?php echo $user['login']; ?>">
      
         <?php
-          if ($result === 'Ошибка есть пустые строки' && empty($_GET['login']) ) {
+          if ($result === 'Ошибка есть пустые строки' && empty($User['login']) ) {
             echo "Зполните поле";
           };?>
      
@@ -31,9 +38,9 @@
     </p>
 
     <p><b>First name</b><br>
-      <input type="text" size="40" name="firstname" value= "<?php echo $_GET['firstname']; ?>">
+      <input type="text" size="40" name="firstname" value= "<?php echo $user['firstname']; ?>">
       <?php
-      if ($result === 'Ошибка есть пустые строки' && empty($_GET['firstname']) ) {
+      if ($result === 'Ошибка есть пустые строки' && empty($User['firstname']) ) {
         echo "Зполните поле";
       };?>
  
@@ -41,9 +48,9 @@
     </p>
 
     <p><b>Last name</b><br>
-      <input type="text" size="40" name="lastname" value= "<?php echo $_GET['lastname']; ?>">
+      <input type="text" size="40" name="lastname" value= "<?php echo $user['lastname']; ?>">
       <?php
-      if ($result === 'Ошибка есть пустые строки' && empty($_GET['lastname']) ) {
+      if ($result === 'Ошибка есть пустые строки' && empty($User['lastname']) ) {
         echo "Зполните поле";
       };?>
  
@@ -51,9 +58,9 @@
     </p>
 
     <p><b>Birthday </b><br>
-      <input type="date" size="40" name="birthday" value= "<?php echo $_GET['birthday']; ?>">
+      <input type="date" size="40" name="birthday" value= "<?php echo $user['birthday']; ?>">
       <?php
-      if ($result === 'Ошибка есть пустые строки' && empty($_GET['birthday']) ) {
+      if ($result === 'Ошибка есть пустые строки' && empty($User['birthday']) ) {
         echo "Зполните поле";
       };?>
  
@@ -70,7 +77,7 @@
 
 
 
-    <button class="button" type="submit" >Create new user</button>
+    <button class="button" type="submit" name = 'submitForm' value = '1' >Create new user</button>
 
 
     <button type="reset" class="button">Очистить</button>

@@ -11,19 +11,20 @@
 <body>
   <h1> Create Document </h1>
 
-
+  <?php
+  if (count($errors) > 0) {
+    foreach ($errors as $value) {
+      echo "<p>$value</p>";
+    }
+  }
+  
+  ?>
 
   <div class="success">
-    <h1>
-      <?php
-        if ($result === 'Ошибка есть пустые строки') {
-          echo "Не все поля заполнены!";
-        };
-        ?>
-    </h1>
+   
   </div>
 
-  <form method="get" class='createDoc'>
+  <form method="post" class='createDoc'>
 
 
     <p><b>Выбирите организацию</b><br>
@@ -35,39 +36,39 @@
       </select>
 
     <p><b>Контрагент</b><br>
-      <input type="text" size="40" name="contragent" value="<?php echo $_GET['contragent']; ?>">
+      <input type="text" size="40" name="contragent" value="<?php echo $doc['contragent']; ?>">
     </p>
 
     <p><b>Подписант</b><br>
-      <input type="text" size="40" name="signature" value="<?php echo $_GET['signature']; ?>">
+      <input type="text" size="40" name="signature" value="<?php echo $doc['signature']; ?>">
     </p>
 
     <p><b>Дата начала догвора </b><br>
-      <input type="date" size="40" name="start" value="<?php echo $_GET['start']; ?>">
+      <input type="date" size="40" name="start" value="<?php echo $doc['start']; ?>">
     </p>
 
     <p><b>Дата окончания догвора </b><br>
-      <input type="date" size="40" name="end" value="<?php echo $_GET['end']; ?>">
+      <input type="date" size="40" name="end" value="<?php echo $doc['end']; ?>">
     </p>
 
     <p><b>Предмет договора</b><br>
-      <input type="text" size="40" name="subjectDoc" value="<?php echo $_GET['subjectDoc']; ?>">
+      <input type="text" size="40" name="subjectDoc" value="<?php echo $doc['subjectDoc']; ?>">
     </p>
 
     <p><b>Сумма догвора в рублях</b><br>
-      <input type="text" size="40" name="sum" value="<?php echo $_GET['sum']; ?>">
+      <input type="text" size="40" name="sum" value="<?php echo $doc['sum']; ?>">
     </p>
 
 
     <p><b>Реквизиты договора :</b><br></p>
     <p>адресс
-      <input type="text" size="40" name="addres" value="<?php echo $_GET['addres']; ?>">
+      <input type="text" size="40" name="addres" value="<?php echo $doc['addres']; ?>">
     </p>
     <p>ИНН
-      <input type="text" size="40" name="inn" value="<?php echo $_GET['inn']; ?>">
+      <input type="text" size="40" name="inn" value="<?php echo $doc['inn']; ?>">
     </p>
     <p>Расчетный счет
-      <input type="text" size="40" name="checkingAccount" value="<?php echo $_GET['checkingAccount']; ?>">
+      <input type="text" size="40" name="checkingAccount" value="<?php echo $doc['checkingAccount']; ?>">
     </p>
 
 
@@ -77,7 +78,7 @@
 
 
 
-    <button class="button" type="submit">Create new Doc</button>
+    <button class="button" type="submit" name ='submitFormDoc' value = '1'>Create new Doc</button>
 
 
     <button type="reset" class="button">Очистить</button>
