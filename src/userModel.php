@@ -39,6 +39,7 @@ class userModel extends model
 
 
     $file = $this->dir . $this->id . '.json';
+    
     $result = $this->open($file);
     return $result;
   }

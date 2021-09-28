@@ -57,6 +57,6 @@ class model
     {
         unlink($file);
         
-        exit;
+        
     }
 }

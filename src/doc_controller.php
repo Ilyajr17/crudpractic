@@ -61,6 +61,7 @@ class docController
       $doc['organization'] = Router::getInstance()->getVar('organization');
       $doc['contragent'] = Router::getInstance()->getVar('contragent');
       $doc['signature'] = Router::getInstance()->getVar('signature');
+      $doc['start'] = Router::getInstance()->getVar('start');
       $doc['end'] = Router::getInstance()->getVar('end');
       $doc['subjectDoc'] = Router::getInstance()->getVar('subjectDoc');
       $doc['sum'] = Router::getInstance()->getVar('sum');
