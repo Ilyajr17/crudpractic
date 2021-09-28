@@ -1,76 +1,64 @@
 <?php
 
-class docModel
-{
+require_once 'model.php';
 
-    function createListDoc()
+class docModel extends model
+{
+    protected $dir = 'data/doc/';
+    protected $id;
+
+    function createList()
     {
-      $dir = 'data/doc/';
-      $arrayFile = scandir($dir);
-      $array = [];
-      foreach ($arrayFile as $filename) {
-        $strJson = file_get_contents($dir . $filename);
-        $array = json_decode($strJson, true);
+      
+      $dirDocCreateList = new model;
   
-        $array['id'] = str_replace('.json', '', $filename);
-        if ($filename === '.' || $filename === '..') {
-          unset($filename);
-        } else {
-          $arrayJson[] = $array;
-        }
-      }
-  
-  
-      return $arrayJson;
+      $result = $this->List();
+      return $result;
+
     }
 
-    function createDoc($doc) 
+    function createDoc($data) 
     {
 
       $i = 1;
-      $path = 'data/doc/' . $i . '.json';
+      $path = $this->dir . $i . '.json';
       while (is_file($path)) {
-        $path = 'data/doc/' . $i++ . '.json';
+        $path = $this->dir . $i++ . '.json';
       }
       $corectPath = $path;
-      $saveJson = json_encode($doc);
-  
-      $file = file_put_contents($corectPath, $saveJson);
-      return $i - 1;
+
+      $result = $this->create($corectPath, $data);
+      return $result;
 
     }
 
-    function openDoc($id)
+    function setId($id)
+    {
+    $this->id = $id;
+    }
+
+    function openDoc()
     {
   
-      $file = 'data/doc/' . $id . '.json';
+      $file = $this->dir . $this->id . '.json';
   
-      $strJson = file_get_contents($file);
-      $array = json_decode($strJson, true);
-  
-      foreach ($array as $index => $name) {
-        $array['id'] = $id;
-      }
-  
-      return $array;
+      $result = $this->open($file);
+      return $result;
     }
 
-    function saveDoc($doc, $id)
+    function saveDoc($doc)
     {
   
-      $file = 'data/doc/' . $id . '.json';
-      $saveJson = json_encode($doc);
-      file_put_contents($file, $saveJson);
+      $file = $this->dir . $this->id . '.json';
+    $result = $this->save($file, $user);
+    return $result;
     }
 
-    function deleteDoc($id)
+    function deleteDoc()
     {
-      $file = 'data/doc/' . $id . '.json';
-      unlink($file);
-      header("Location:/doc");
-      exit;
+      $file = $this->dir . $this->id . '.json';
+      $result = $this -> delete($file);
+
+      return $result;
     }
-
-
-
-}
+  }

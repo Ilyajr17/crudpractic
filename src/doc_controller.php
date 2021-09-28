@@ -1,13 +1,15 @@
 <?php
 require_once 'view.php';
 require 'docModel.php';
+require_once 'model.php';
 
 class docController
 {
   function listDoc()
   {
     $docTable = new docModel();
-    $result = $docTable->createListDoc();
+  
+    $result = $docTable->createList();
     View::render('listDoc', ['arrayJson' => $result]);
   }
 
@@ -16,7 +18,11 @@ class docController
   {
     $createDoc = new docModel();
     $errors = [];
-    $doc = $createDoc->openDoc($_GET['id']);
+
+    $createDoc -> setID($_GET['id']);
+
+    $doc = $createDoc->openDoc();
+
     if (Router::getInstance()->getVar('updateDoc')) {
       $doc = [];
       $doc['organization'] = Router::getInstance()->getVar('organization');
@@ -81,7 +87,10 @@ class docController
   function deleteDoc()
   {
     $deleteDoc = new docModel;
-    $deleteDoc->deleteDoc($_GET['id']);
+    $deleteDoc->setId($_GET['id']);
+    $deleteDoc->deleteDoc();
+    header("Location:/doc");
+    exit;
   }
 
   protected function check($data)

@@ -1,6 +1,7 @@
 <?php
 require_once 'view.php';
 require 'userModel.php';
+require_once 'model.php';
 
 
 class userController
@@ -18,7 +19,11 @@ class userController
   {
     $createUser = new userModel();
     $errors = [];
-    $user = $createUser->openUser($_GET['id']);
+   
+    $createUser -> setID($_GET['id']);
+
+    $user = $createUser->openUser();
+
     if (Router::getInstance()->getVar('update')) {
       $user = [];
       $user['login'] = Router::getInstance()->getVar('login');
@@ -26,9 +31,9 @@ class userController
       $user['lastname'] = Router::getInstance()->getVar('lastname');
       $user['birthday'] = Router::getInstance()->getVar('birthday');
       $user['id'] = Router::getInstance()->getVar('id');
-
+      
       if ($this->check($user)) {
-
+      
         $createUser->saveUser($user, $user['id']);
         header("Location: /user");
         exit;
@@ -75,15 +80,20 @@ class userController
   function delete()
   {
     $deleteUSer = new userModel;
-
-    $deleteUSer->deleteUser($_GET['id']);
+    $deleteUSer->setId($_GET['id']);
+    $deleteUSer->deleteUser();
+    header("Location:/user");
+    exit;
   }
 
   protected function check($data)
   {
     foreach ($data as $key => $val) {
+      
       if ($val == "") {
+        
         return false;
+        
       }
     }
     return true;

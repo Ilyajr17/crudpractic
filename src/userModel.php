@@ -1,74 +1,61 @@
 <?php
 
+require_once 'model.php';
 
-class userModel
+class userModel extends model
 {
+  protected $dir = 'data/users/';
+  protected $id;
 
   function createList()
   {
-    $dir = 'data/users/';
-    $arrayFile = scandir($dir);
-    $array = [];
-    foreach ($arrayFile as $filename) {
-      $strJson = file_get_contents($dir . $filename);
-      $array = json_decode($strJson, true);
 
-      $array['id'] = str_replace('.json', '', $filename);
-      if ($filename === '.' || $filename === '..') {
-        unset($filename);
-      } else {
-        $arrayJson[] = $array;
-      }
-    }
+    $dirUserCreateList = new model;
 
-
-    return $arrayJson;
+    $result = $this->list();
+    return $result;
   }
 
-
-
-  function createUser($newUserArray)
+  function createUser($data)
   {
     $i = 1;
-    $path = 'data/users/' . $i . '.json';
+    $path = $this->dir . $i . '.json';
     while (is_file($path)) {
-      $path = 'data/users/' . $i++ . '.json';
+      $path = $this->dir . $i++ . '.json';
     }
     $corectPath = $path;
-    $saveJson = json_encode($newUserArray);
 
-    $file = file_put_contents($corectPath, $saveJson);
-    return $i - 1;
+    $result = $this->create($corectPath, $data);
+    return $result;
   }
 
-  function openUser($id)
+  function setId($id)
   {
-
-    $file = 'data/users/' . $id . '.json';
-
-    $strJson = file_get_contents($file);
-    $array = json_decode($strJson, true);
-
-    foreach ($array as $index => $name) {
-      $array['id'] = $id;
-    }
-
-    return $array;
+    $this->id = $id;
   }
 
-  function saveUser($user, $id)
+  function openUser()
   {
 
-    $file = 'data/users/' . $id . '.json';
-    $saveJson = json_encode($user);
-    file_put_contents($file, $saveJson);
+
+    $file = $this->dir . $this->id . '.json';
+    $result = $this->open($file);
+    return $result;
   }
 
-  function deleteUser($id)
+  function saveUser($user)
   {
-    $file = 'data/users/' . $id . '.json';
-    unlink($file);
-    header("Location:/user");
-    exit;
+
+    $file = $this->dir . $this->id . '.json';
+    $result = $this->save($file, $user);
+    return $result;
+  }
+
+  function deleteUser()
+  {
+    $file = $this->dir . $this->id . '.json';
+    $result = $this->delete($file);
+
+    return $result;
   }
 }
