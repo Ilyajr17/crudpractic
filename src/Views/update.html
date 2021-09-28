@@ -1,0 +1,68 @@
+<?php 
+
+namespace Views;
+
+?>
+
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/../../style.css" />
+</head>
+
+<h1> Update User </h1>
+<?php
+if (count($errors) > 0) {
+  foreach ($errors as $value) {
+    echo "<p>$value</p>";
+  }
+}
+
+?>
+<body>
+
+  <form method="post">
+
+ 
+
+
+    <p><b>Login</b><br>
+      <input type="text" size="40" name="login" value="<?php echo $user['login']; ?>">
+      <?php
+      if ($result === 'Ошибка есть пустые строки' && empty($array['firstname']) ) {
+        echo "Зполните поле";
+      };?>
+    </p>
+
+    <p><b>First name</b><br>
+      <input type="text" size="40" name="firstname" value="<?php echo $user['firstname']; ?>">
+    </p>
+
+    <p><b>Last name</b><br>
+      <input type="text" size="40" name="lastname" value="<?php echo $user['lastname']; ?>">
+    </p>
+
+    <p><b>Birthday </b><br>
+      <input type="date" size="40" name="birthday" value="<?php echo $user['birthday']; ?>">
+    </p>
+
+
+
+    <label for="checkbox">Activ</label>
+    <input id="checkbox" type="checkbox" name="is_active" value="<?php echo $user['is_active']; ?>" checked>
+
+    <p><b> </b><br>
+      <input size="40" name="id" value="<?php echo $user['id']; ?>" >
+    </p>
+
+
+
+    <button class="button" type="submit" name="update" value = '2'>Update</button>
+
+    <a href="/user" class="button">Main</a>
+  </form>
+
+</body>
+
+</html>
