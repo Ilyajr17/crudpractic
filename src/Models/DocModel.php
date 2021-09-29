@@ -2,10 +2,11 @@
 namespace Models;
 
 
-class DocModel extends Model
+class DocModel extends DbModel
 {
   protected $dir = 'data/doc/';
   protected $id;
+  protected $table = 'docs';
 
   function createList()
   {
@@ -23,8 +24,10 @@ class DocModel extends Model
     }
     $corectPath = $path;
 
-    $result = $this->create($corectPath, $data);
+    //$result = $this->create($corectPath, $data);
+    $result = $this->create($data); //ля база данных
     return $result;
+
   }
 
   function setId($id)
@@ -37,22 +40,27 @@ class DocModel extends Model
 
     $file = $this->dir . $this->id . '.json';
 
-    $result = $this->open($file);
+    //$result = $this->open($file);
+    $result = $this->open($this->id); // ля база данных 
     return $result;
   }
 
-  function saveDoc($doc)
+  function saveDoc($user)
   {
 
     $file = $this->dir . $this->id . '.json';
-    $result = $this->save($file, $doc);
+
+    //$result = $this->save($file, $doc);
+    $result = $this->save($user, $this->id); // ля базы данных
     return $result;
   }
 
   function deleteDoc()
   {
     $file = $this->dir . $this->id . '.json';
-    $result = $this->delete($file);
+
+    //$result = $this->delete($file);
+    $result = $this->delete($this->id);// для база данных
 
     return $result;
   }

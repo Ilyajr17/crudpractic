@@ -49,3 +49,54 @@
 2021/09/21 12:35:45 [error] 22#22: *1079 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: crud.local, request: "GET /user/list.php HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "localhost:8080", referrer: "http://localhost:8080/user/create"
 2021/09/21 12:36:12 [error] 22#22: *1079 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: crud.local, request: "GET /user/list.php HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "localhost:8080", referrer: "http://localhost:8080/user/create"
 2021/09/27 12:11:54 [error] 24#24: *5721 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: crud.local, request: "GET /swith.php HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "localhost:8080"
+2021/09/28 10:59:46 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/09/28 10:59:46 [notice] 25#25: gracefully shutting down
+2021/09/28 10:59:46 [notice] 25#25: exiting
+2021/09/28 10:59:46 [notice] 23#23: gracefully shutting down
+2021/09/28 10:59:46 [notice] 23#23: exiting
+2021/09/28 10:59:46 [notice] 25#25: exit
+2021/09/28 10:59:46 [notice] 23#23: exit
+2021/09/28 10:59:46 [notice] 24#24: gracefully shutting down
+2021/09/28 10:59:46 [notice] 22#22: gracefully shutting down
+2021/09/28 10:59:46 [notice] 24#24: exiting
+2021/09/28 10:59:46 [notice] 22#22: exiting
+2021/09/28 10:59:46 [notice] 24#24: exit
+2021/09/28 10:59:46 [notice] 22#22: exit
+2021/09/28 10:59:46 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/09/28 10:59:46 [notice] 1#1: worker process 22 exited with code 0
+2021/09/28 10:59:46 [notice] 1#1: worker process 23 exited with code 0
+2021/09/28 10:59:46 [notice] 1#1: worker process 25 exited with code 0
+2021/09/28 10:59:46 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/09/28 10:59:46 [notice] 1#1: worker process 24 exited with code 0
+2021/09/28 10:59:46 [notice] 1#1: exit
+2021/09/28 11:00:35 [notice] 1#1: using the "epoll" event method
+2021/09/28 11:00:35 [notice] 1#1: nginx/1.21.3
+2021/09/28 11:00:35 [notice] 1#1: built by gcc 10.3.1 20210424 (Alpine 10.3.1_git20210424) 
+2021/09/28 11:00:35 [notice] 1#1: OS: Linux 5.4.0-84-generic
+2021/09/28 11:00:35 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/09/28 11:00:35 [notice] 1#1: start worker processes
+2021/09/28 11:00:35 [notice] 1#1: start worker process 23
+2021/09/28 11:00:35 [notice] 1#1: start worker process 24
+2021/09/28 11:00:35 [notice] 1#1: start worker process 25
+2021/09/28 11:00:35 [notice] 1#1: start worker process 26
+2021/09/28 11:42:22 [error] 25#25: *20 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:44:30 [error] 23#23: *29 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:44:30 [error] 23#23: *29 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:44:31 [error] 23#23: *29 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:44:31 [error] 23#23: *29 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:44:31 [error] 23#23: *29 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:44:31 [error] 23#23: *29 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:44:42 [error] 23#23: *29 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:50:43 [error] 23#23: *46 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:51:01 [error] 23#23: *46 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:57:03 [error] 23#23: *52 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:57:03 [error] 23#23: *52 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 11:57:16 [error] 23#23: *52 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 12:50:25 [error] 23#23: *140 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /Models/DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 12:50:26 [error] 23#23: *140 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /Models/DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 12:50:43 [error] 23#23: *140 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 12:50:48 [error] 23#23: *140 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 12:51:09 [error] 23#23: *140 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 12:58:33 [error] 23#23: *153 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 12:59:15 [error] 23#23: *153 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"
+2021/09/28 13:23:34 [error] 23#23: *168 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: crud.local, request: "GET /DbAdapter.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "localhost:8080"

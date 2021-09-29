@@ -2,16 +2,16 @@
 
 namespace Models;
 
-
-
-class UserModel extends Model
+class UserModel extends DbModel
 {
   protected $dir = 'data/users/';
   protected $id;
+  protected $table = 'users';
 
   function createList()
   {
     $result = $this->list();
+
     return $result;
   }
 
@@ -24,7 +24,8 @@ class UserModel extends Model
     }
     $corectPath = $path;
 
-    $result = $this->create($corectPath, $data);
+    // $result = $this->create($corectPath, $data);
+    $result = $this->create($data); // для ббазы данных
     return $result;
   }
 
@@ -36,10 +37,11 @@ class UserModel extends Model
   function openUser()
   {
 
-
     $file = $this->dir . $this->id . '.json';
-    
-    $result = $this->open($file);
+
+    $result = $this->open($this->id); //для базы данных
+
+    //$result = $this->open($file);
     return $result;
   }
 
@@ -47,14 +49,19 @@ class UserModel extends Model
   {
 
     $file = $this->dir . $this->id . '.json';
-    $result = $this->save($file, $user);
+
+    //$result = $this->save($file, $user);
+   
+    $result = $this->save($user, $this->id); //для базы данных
+    
     return $result;
   }
 
   function deleteUser()
   {
     $file = $this->dir . $this->id . '.json';
-    $result = $this->delete($file);
+    //$result = $this->delete($file);
+    $result = $this->delete($this->id); // для база данных
 
     return $result;
   }

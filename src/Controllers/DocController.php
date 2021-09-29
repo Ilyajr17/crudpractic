@@ -14,6 +14,9 @@ class DocController
     $docTable = new DocModel();
 
     $result = $docTable->createList();
+
+   
+
     View::render('listDoc', ['arrayJson' => $result]);
   }
 

@@ -14,16 +14,25 @@ class UserController
   {
     $userTable = new UserModel();
     $result = $userTable->createList();
+    
     View::render('list', ['arrayJson' => $result]);
+    
   }
 
   function update()
 
   {
+    
     $createUser = new UserModel();
     $errors = [];
+   
+
 
     $createUser->setID($_GET['id']);
+
+    
+
+    
 
     $user = $createUser->openUser();
 
@@ -61,7 +70,7 @@ class UserController
 
     if (Router::getInstance()->getVar('submitForm')) {
 
-     // $user = userValidator::formCreate();
+    
 
      $user = [];
      $user['login'] = Router::getInstance()->getVar('login');

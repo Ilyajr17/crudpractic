@@ -26,8 +26,9 @@ class Model
         }
 
         return $arrayJson;
-    }
 
+    }
+    
     function create($corectPath, $newUserArray)
     {
         $saveJson = json_encode($newUserArray);
@@ -41,10 +42,8 @@ class Model
         $strJson = file_get_contents($file);
         $array = json_decode($strJson, true);
 
-        foreach ($array as $index => $name) {
+        $array['id'] = $this->id;
 
-            $array['id'] = $this->id;
-        }
         return $array;
     }
 
